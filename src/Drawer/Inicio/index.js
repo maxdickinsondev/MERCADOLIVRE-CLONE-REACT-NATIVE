@@ -1,6 +1,8 @@
 import React from 'react';
 import { View, Text, Button } from 'react-native';
 
+import Header from '../../components/Header';
+
 export default function Inicio({ navigation }) {
     function handleOpenMenu() {
         navigation.openDrawer();
@@ -8,8 +10,7 @@ export default function Inicio({ navigation }) {
 
     return (
         <View>
-            <Text>Estou na tela principal!</Text>
-            <Button title="Open Menu Drawer" onPress={handleOpenMenu} />
+            <Header />
         </View>
     );
 }
