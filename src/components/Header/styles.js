@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const Container = styled.View`
     padding: 15px;
     background-color: #FFDA18;
-    height: 200px;
+    height: 100px;
 `;
 
 export const AreaButtons = styled.View`
