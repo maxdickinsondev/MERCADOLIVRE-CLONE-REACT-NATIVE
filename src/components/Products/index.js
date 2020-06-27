@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Image, View, Dimensions, Animated } from 'react-native';
 
-import { Container, List } from './styles';
+import { Container, List, Title } from './styles';
 import { ScrollView } from 'react-native-gesture-handler';
 
 const { width } = Dimensions.get('window');
@@ -11,6 +11,8 @@ import produtosLimpeza from '../../assets/products/produtoslimpeza.jpeg';
 import desconto from '../../assets/products/desconto.jpeg';
 import veiculo from '../../assets/products/veiculo.jpeg';
 import recarga from '../../assets/products/recarga.jpeg';
+
+import Offers from '../Offers';
 
 export default function Products() {
     const scrollX = useState(new Animated.Value(0));
@@ -27,6 +29,7 @@ export default function Products() {
                 data={arr}
                 renderItem={() => (
                     <ScrollView
+                        showsHorizontalScrollIndicator={false}
                         horizontal={true}
                         pagingEnabled={true}
                     >
@@ -67,6 +70,8 @@ export default function Products() {
                     </ScrollView>
                 )}
             />
+
+            <Offers />
         </Container>
     );
 }

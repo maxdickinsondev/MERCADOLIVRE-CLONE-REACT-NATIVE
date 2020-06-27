@@ -10,7 +10,7 @@ export default function Inicio({ navigation }) {
 
     return (
         <View>
-            <Header />
+            <Header navigation={navigation} />
         </View>
     );
 }

@@ -1,4 +1,6 @@
 import React from 'react';
+import { TouchableOpacity } from 'react-native';
+
 import Bars from 'react-native-vector-icons/FontAwesome';
 import Search from 'react-native-vector-icons/EvilIcons';
 import Cart from 'react-native-vector-icons/Feather';
@@ -12,12 +14,18 @@ import { Container, AreaButtons, AreaInput, Input,
 
 import Products from '../Products';
 
-export default function Header() {
+export default function Header({ navigation }) {
+    function handleOpenMenuDrawer() {
+        navigation.openDrawer();
+    }
+
     return (
         <>
             <Container>
                 <AreaButtons>
-                    <Bars name="bars" size={20} />
+                    <TouchableOpacity unde  onPress={handleOpenMenuDrawer}>
+                        <Bars name="bars" size={20} />
+                    </TouchableOpacity>
                     
                     <AreaInput>
                         <Input placeholder="Buscar no Mercado Livre" />

@@ -23,7 +23,7 @@ export default function Custom(props) {
     return (
         <View style={{ flex: 1 }}>
             <DrawerContentScrollView {...props }>
-                <View style={{ height: 100, width: 280, backgroundColor: '#EBEF26', padding: 20, flexDirection: 'row', alignItems: 'center' }}>
+                <View style={{ height: 100, width: 280, backgroundColor: '#FFDA18', padding: 20, flexDirection: 'row', alignItems: 'center' }}>
                     <View>
                         <Image style={{ width: 50, height: 50, marginRight: 10 }}  source={Perfil} />
                     </View>
