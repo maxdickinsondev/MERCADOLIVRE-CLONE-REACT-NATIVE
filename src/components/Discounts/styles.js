@@ -29,37 +29,15 @@ export const Title = styled.Text`
 
 export const AreaImage = styled.View`
     align-items: center;
-    padding-top: 30px;
+    padding-top: 20px;
     padding-bottom: 20px;
-
-    background-color: #ccc;
-    border-radius: 50px;
 `;
 
 export const Image = styled.Image`
-    width: 30px;
-    height: 30px;
+    width: 270px;
+    height: 250px;
 `;
 
-export const Description = styled.Text``;
-
-export const Product = styled.Text``;
-
-export const Value = styled.Text`
-    font-size: 18px;
-`;
-
-export const AreaHistory = styled.View`
-    align-items: center;
-    flex-direction: row;
-    justify-content: space-between;
-`;
-
-export const History = styled.Text`
-    font-size: 15px;
-    color: blue;
-    font-weight: bold;
-`;
 
 export const AreaInfo = styled.View`
     flex-direction: row;
@@ -87,5 +65,15 @@ export const AreaDetails = styled.View`
 `;
 
 export const AreaCard = styled.View`
-    flex-direction: column;
+    align-items: center;
+    border-radius: 4px;
+    margin-bottom: 10px;
+
+    width: 100%;
+    max-width: 330px;
+`;
+
+export const ImageTools = styled.Image`
+    width: 330px;
+    height: 390px;
 `;
