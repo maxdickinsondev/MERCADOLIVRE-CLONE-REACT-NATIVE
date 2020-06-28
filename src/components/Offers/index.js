@@ -1,5 +1,5 @@
 import React from 'react';
-import { Image, View } from 'react-native';
+import { Image } from 'react-native';
 
 import QRCode from 'react-native-vector-icons/AntDesign';
 import Ofertas from '../../assets/ofertas.png';

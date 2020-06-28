@@ -19,7 +19,7 @@ export default function Products() {
 
     const arr = [
         {
-            id: 1
+            id: '1'
         }
     ];
 
@@ -27,6 +27,7 @@ export default function Products() {
         <>
             <List 
                 data={arr}
+                showsVerticalScrollIndicator={false}
                 renderItem={({ item }) => (
                     <>
                         <ScrollView

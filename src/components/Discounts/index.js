@@ -9,6 +9,8 @@ import Ferramentas from '../../assets/recomendation/ferramentas.jpeg';
 import Conforto from '../../assets/descontos/conforto.jpeg';
 import Cozinha from '../../assets/recomendation/cozinha.jpeg';
 
+import Categories from '../Categories';
+
 export default function Discounts() {
     return (
         <>
@@ -49,6 +51,8 @@ export default function Discounts() {
                     />
                 </AreaCard>
             </Container>
+
+            <Categories />
         </>
     );
 }
