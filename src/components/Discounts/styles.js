@@ -2,7 +2,6 @@ import styled from 'styled-components';
 
 export const Container = styled.View`
     align-items: center;
-    padding-top: 20px;
 `;
 
 export const AreaTitle = styled.View`
@@ -32,16 +31,14 @@ export const AreaImage = styled.View`
     align-items: center;
     padding-top: 30px;
     padding-bottom: 20px;
-`;
 
-export const ImageView = styled.View`
-    padding: 10px 1px;
-    padding-right: 12px;
+    background-color: #ccc;
+    border-radius: 50px;
 `;
 
 export const Image = styled.Image`
-    width: 220px;
-    height: 200px;
+    width: 30px;
+    height: 30px;
 `;
 
 export const Description = styled.Text``;
@@ -50,22 +47,6 @@ export const Product = styled.Text``;
 
 export const Value = styled.Text`
     font-size: 18px;
-`;
-
-export const Plots = styled.Text`
-    color: green;
-`;
-
-export const Percentagem = styled.Text`
-    color: green;
-`;
-
-export const AreaFreight = styled.View``;
-
-export const Freight = styled.Text`
-    color: green;
-
-    padding-bottom: 30px;
 `;
 
 export const AreaHistory = styled.View`
@@ -86,6 +67,25 @@ export const AreaInfo = styled.View`
     border-color: #eee;
 `;
 
+export const AreaDownload = styled.View``;
+
+export const ButtonDownload = styled.TouchableOpacity`
+
+`;
+
+export const AreaProducts = styled.View`
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+`;
+
 export const AreaDetails = styled.View`
-    padding-top: 10px;
+    align-items: center;
+    flex-direction: column;
+
+    padding: 20px;
+`;
+
+export const AreaCard = styled.View`
+    flex-direction: column;
 `;
