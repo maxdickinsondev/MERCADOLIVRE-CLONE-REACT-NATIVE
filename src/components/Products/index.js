@@ -24,15 +24,18 @@ export default function Products() {
     ];
 
     return (
-        <Container>
+        <>
             <List 
                 data={arr}
-                renderItem={() => (
-                    <ScrollView
-                        showsHorizontalScrollIndicator={false}
-                        horizontal={true}
-                        pagingEnabled={true}
-                    >
+                renderItem={({ item }) => (
+                    <>
+                        <ScrollView
+                            key={String(item.id)}
+                            showsHorizontalScrollIndicator={false}
+                            horizontal={true}
+                            pagingEnabled={true}
+                        >
+
                         <Animated.View>
                             <Image 
                                 style={{ width: width, height: 150, borderRadius: 6 }}
@@ -67,11 +70,13 @@ export default function Products() {
                                 source={recarga}
                             />
                         </View>
-                    </ScrollView>
+                    
+                        </ScrollView>
+                    
+                        <Offers />
+                    </>
                 )}
             />
-
-            <Offers />
-        </Container>
+        </>
     );
 }
