@@ -45,3 +45,7 @@ export const AreaInfo = styled.View`
     border-bottom-width: 1px;
     border-color: #eee;
 `;
+
+export const Image = styled.Image`
+
+`;

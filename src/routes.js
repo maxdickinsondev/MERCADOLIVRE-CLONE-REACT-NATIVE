@@ -5,6 +5,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 const Stack = createStackNavigator();
 
 import Drawer from '../src/Drawer';
+import TabNavigator from '../src/TabNavigator';
 
 export default function Routes() {
     return (
@@ -13,6 +14,7 @@ export default function Routes() {
                 headerMode="none"
             >
                 <Stack.Screen name="Drawer" component={Drawer} />
+                <Stack.Screen name="Tab" component={TabNavigator} />
             </Stack.Navigator>
         </NavigationContainer>
     );

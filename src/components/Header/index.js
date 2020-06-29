@@ -19,11 +19,15 @@ export default function Header({ navigation }) {
         navigation.openDrawer();
     }
 
+    function handleOpenTab() {
+        navigation.navigate('Tab');
+    }
+
     return (
         <>
             <Container>
                 <AreaButtons>
-                    <TouchableOpacity unde  onPress={handleOpenMenuDrawer}>
+                    <TouchableOpacity onPress={handleOpenMenuDrawer}>
                         <Bars name="bars" size={20} />
                     </TouchableOpacity>
                     
@@ -31,7 +35,9 @@ export default function Header({ navigation }) {
                         <Input placeholder="Buscar no Mercado Livre" />
                     </AreaInput>
 
-                    <Cart name="shopping-cart" size={20} />
+                    <TouchableOpacity onPress={handleOpenTab}>
+                        <Cart name="shopping-cart" size={20} />
+                    </TouchableOpacity>
                 </AreaButtons>
 
                 <AreaLocation>

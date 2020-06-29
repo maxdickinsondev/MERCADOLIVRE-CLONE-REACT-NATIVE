@@ -5,8 +5,13 @@ import Smartphone from 'react-native-vector-icons/MaterialIcons';
 import Shirt from 'react-native-vector-icons/FontAwesome5';
 import Couch from 'react-native-vector-icons/FontAwesome5';
 
+import ArrowRight from 'react-native-vector-icons/MaterialIcons';
+
+import Fogão from '../../assets/categories/fogão.png';
+import Volante from '../../assets/categories/volante.png';
+
 import { Container, Area, AreaInfo, AreaTitle, 
-    Title, AreaCategories, Description
+    Title, AreaCategories, Description, Image
 } from './styles';
 
 export default function Categories() {
@@ -20,7 +25,7 @@ export default function Categories() {
                         </AreaTitle>
 
                         <AreaCategories>
-                            <Car name="car" size={20} color="#4194F5" />
+                            <Car name="car" size={25} color="#4194F5" />
 
                             <Description>Carros, Motos e Outros</Description>
                         </AreaCategories>
@@ -28,7 +33,7 @@ export default function Categories() {
 
                     <AreaInfo>
                         <AreaCategories>
-                            <Smartphone name="smartphone" size={20} color="#4194F5" />
+                            <Smartphone name="smartphone" size={25} color="#4194F5" />
 
                             <Description>Celulares e Telefones</Description>
                         </AreaCategories>
@@ -36,7 +41,7 @@ export default function Categories() {
 
                     <AreaInfo>
                         <AreaCategories>
-                            <Shirt name="tshirt" size={20} color="#4194F5" />
+                            <Shirt name="tshirt" size={25} color="#4194F5" />
 
                             <Description>Calçados, Roupas e Bolsas</Description>
                         </AreaCategories>
@@ -44,9 +49,39 @@ export default function Categories() {
 
                     <AreaInfo>
                         <AreaCategories>
-                            <Couch name="couch" size={20} color="#4194F5" />
+                            <Couch name="couch" size={25} color="#4194F5" />
 
                             <Description>Casa, Móveis e Decoração</Description>
+                        </AreaCategories>
+                    </AreaInfo>
+
+                    <AreaInfo>
+                        <AreaCategories>
+                            <Image
+                                style={{ width: 25, height: 25 }}
+                                source={Fogão}
+                            />
+
+                            <Description>Eletrodomésticos</Description>
+                        </AreaCategories>
+                    </AreaInfo>
+
+                    <AreaInfo>
+                        <AreaCategories>
+                            <Image
+                                style={{ width: 25, height: 25 }}
+                                source={Volante}
+                            />
+
+                            <Description>Acessórios para Veículos</Description>
+                        </AreaCategories>
+                    </AreaInfo>
+
+                    <AreaInfo>
+                        <AreaCategories style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
+                            <Description style={{ color: '#4194F5' }}>Acessórios para Veículos</Description>
+
+                            <ArrowRight name="keyboard-arrow-right" size={25} color="#4194F5" />
                         </AreaCategories>
                     </AreaInfo>
                 </Area>

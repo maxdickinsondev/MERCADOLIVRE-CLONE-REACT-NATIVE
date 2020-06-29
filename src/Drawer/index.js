@@ -3,8 +3,6 @@ import { createDrawerNavigator } from '@react-navigation/drawer';
 
 const Drawer = createDrawerNavigator();
 
-import Home from '../assets/inicio.png';
-
 import Custom from './Custom';
 import Inicio from './Inicio';
 import Perfil from './Perfil'
