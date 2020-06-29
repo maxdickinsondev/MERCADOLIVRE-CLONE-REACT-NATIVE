@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { View, Text, Image } from 'react-native';
 import { Drawer } from 'react-native-paper';
 import { DrawerContentScrollView, DrawerItem } from '@react-navigation/drawer';
@@ -19,7 +19,19 @@ import Supermercado from '../../assets/supermercado.png';
 import Lojas from '../../assets/lojasoficiais.png';
 import Ajuda from '../../assets/ajuda.png';
 
+import InicioBlue from '../../assets/icons_blue/inicio_blue.png';
+import BuscarBlue from '../../assets/icons_blue/buscar_blue.png';
+import NotificaçõesBlue from '../../assets/icons_blue/notificações_blue.png';
+import ComprasBlue from '../../assets/icons_blue/minhascompras_blue.png';
+import FavoritosBlue from '../../assets/icons_blue/favoritos_blue.png';
+import ContaBlue from '../../assets/icons_blue/minhaconta_blue.png';
+import OfertasBlue from '../../assets/icons_blue/ofertas_blue.png';
+import VenderBlue from '../../assets/icons_blue/vender_blue.png';
+import HistoricoBlue from '../../assets/icons_blue/historico_blue.png';
+
 export default function Custom(props) {
+    const [active, setActive] = useState('');
+
     return (
         <View style={{ flex: 1 }}>
             <DrawerContentScrollView {...props }>
@@ -35,134 +47,287 @@ export default function Custom(props) {
                 </View>
 
                 <Drawer.Section>
-                    <DrawerItem 
+                    {active === 'first' ? (
+                        <DrawerItem
+                            focused={active === 'first'}
+                            icon={() => (
+                                <Image 
+                                    source={InicioBlue}
+                                    style={{ width: 22, height: 22 }}
+                                />
+                            )}
+
+                            label="Inicio"
+                            onPress={() => setActive('first')}
+                        />
+                    ) : (
+                        <DrawerItem
+                            focused={active === 'first'}
+                            icon={() => (
+                                <Image 
+                                    source={Inicio}
+                                    style={{ width: 22, height: 22 }}
+                                />
+                            )}
+
+                            label="Inicio"
+                            onPress={() => {props.navigation.navigate('Perfil'), setActive('first')}}
+                        />
+                    )}
+
+                   {active === 'second' ? (
+                       <DrawerItem
+                        focused={active === 'second'}
                         icon={({ color, size }) => (
                             <Image 
-                                source={Inicio}
+                                source={BuscarBlue}
                                 style={{ width: 22, height: 22 }}
                             />
                         )}
-                        label="Inicio"
-                        onPress={() => {props.navigation.navigate('Perfil')}}
+                        onPress={() => setActive('second')}
+                        label="Buscar"
                     />
-
-                    <DrawerItem 
+                   ) : (
+                    <DrawerItem
+                        focused={active === 'second'}
                         icon={({ color, size }) => (
                             <Image 
                                 source={Buscar}
                                 style={{ width: 22, height: 22 }}
                             />
                         )}
+                        onPress={() => setActive('second')}
                         label="Buscar"
                     />
+                   ) }
 
-                    <DrawerItem
-                        icon={({ color, size }) => (
-                            <Image 
-                                source={Notificações}
-                                style={{ width: 22, height: 22 }}
-                            />
-                        )}
-                        label="Notificações"
+                    {active == 'three' ? (
+                        <DrawerItem
+                            focused={active === 'three'}
+                            icon={({ color, size }) => (
+                                <Image 
+                                    source={NotificaçõesBlue}
+                                    style={{ width: 22, height: 22 }}
+                                />
+                            )}
+                            onPress={() => setActive('three')}
+                            label="Notificações"
                     />
+                    ) : (
+                        <DrawerItem
+                            focused={active === 'three'}
+                            icon={({ color, size }) => (
+                                <Image 
+                                    source={Notificações}
+                                    style={{ width: 22, height: 22 }}
+                                />
+                            )}
+                            onPress={() => setActive('three')}
+                            label="Notificações"
+                        />
+                    )}
 
-                    <DrawerItem
-                        icon={({ color, size }) => (
-                            <Image 
-                                source={Compras}
-                                style={{ width: 22, height: 22 }}
-                            />
-                        )}
-                        label="Minhas compras"
+                    {active === 'four' ? (
+                        <DrawerItem
+                            focused={active === 'four'}
+                            icon={({ color, size }) => (
+                                <Image 
+                                    source={ComprasBlue}
+                                    style={{ width: 22, height: 22 }}
+                                />
+                            )}
+                            onPress={() => setActive('four')}
+                            label="Minhas compras"
                     />
+                    ) : (
+                        <DrawerItem
+                            focused={active === 'four'}
+                            icon={({ color, size }) => (
+                                <Image 
+                                    source={Compras}
+                                    style={{ width: 22, height: 22 }}
+                                />
+                            )}
+                            onPress={() => setActive('four')}
+                            label="Minhas compras"
+                        />
+                    )}
 
-                    <DrawerItem
-                        icon={({ color, size }) => (
-                            <Image 
-                                source={Favoritos}
-                                style={{ width: 22, height: 22 }}
-                            />
-                        )}
-                        label="Favoritos"
+                    {active == 'five' ? (
+                        <DrawerItem
+                            focused={active === 'five'}
+                            icon={({ color, size }) => (
+                                <Image 
+                                    source={FavoritosBlue}
+                                    style={{ width: 22, height: 22 }}
+                                />
+                            )}
+                            onPress={() => setActive('five')}
+                            label="Favoritos"
                     />
-
-                    <DrawerItem
-                        icon={({ color, size }) => (
-                            <Image 
-                                source={Conta}
-                                style={{ width: 22, height: 22 }}
-                            />
-                        )}
-                        label="Minha conta"
+                    ) : (
+                        <DrawerItem
+                            focused={active === 'five'}
+                            icon={({ color, size }) => (
+                                <Image 
+                                    source={Favoritos}
+                                    style={{ width: 22, height: 22 }}
+                                />
+                            )}
+                            onPress={() => setActive('five')}
+                            label="Favoritos"
                     />
+                    )}
 
-                    <DrawerItem
-                        icon={({ color, size }) => (
-                            <Image 
-                                source={Ofertas}
-                                style={{ width: 22, height: 22 }}
-                            />
-                        )}
-                        label="Ofertas"
+                    {active === 'six' ? (
+                        <DrawerItem
+                            focused={active === 'six'}
+                            icon={({ color, size }) => (
+                                <Image 
+                                    source={ContaBlue}
+                                    style={{ width: 22, height: 22 }}
+                                />
+                            )}
+                            onPress={() => setActive('six')}
+                            label="Minha conta"
                     />
+                    ) : (
+                        <DrawerItem
+                            focused={active === 'six'}
+                            icon={({ color, size }) => (
+                                <Image 
+                                    source={Conta}
+                                    style={{ width: 22, height: 22 }}
+                                />
+                            )}
+                            onPress={() => setActive('six')}
+                            label="Minha conta"
+                        />
+                    )}
 
-                    <DrawerItem
-                        icon={({ color, size }) => (
-                            <Image 
-                                source={Vender}
-                                style={{ width: 22, height: 22 }}
-                            />
-                        )} 
-                        label="Vender"
+                    {active === 'seven' ? (
+                        <DrawerItem
+                            focused={active === 'seven'}
+                            icon={({ color, size }) => (
+                                <Image 
+                                    source={OfertasBlue}
+                                    style={{ width: 22, height: 22 }}
+                                />
+                            )}
+                            onPress={() => setActive('seven')}
+                            label="Ofertas"
                     />
+                    ) : (
+                        <DrawerItem
+                            focused={active === 'seven'}
+                            icon={({ color, size }) => (
+                                <Image 
+                                    source={Ofertas}
+                                    style={{ width: 22, height: 22 }}
+                                />
+                            )}
+                            onPress={() => setActive('seven')}
+                            label="Ofertas"
+                        />
+                    )}
 
-                    <DrawerItem
-                        icon={({ color, size }) => (
-                            <Image 
-                                source={Historico}
-                                style={{ width: 22, height: 22 }}
-                            />
-                        )}
-                        label="Histórico"
+                    {active === 'eight' ? (
+                        <DrawerItem
+                            focused={active === 'eight'}
+                            icon={({ color, size }) => (
+                                <Image 
+                                    source={VenderBlue}
+                                    style={{ width: 22, height: 22 }}
+                                />
+                            )} 
+                            onPress={() => setActive('eight')}
+                            label="Vender"
                     />
+                    ) : (
+                        <DrawerItem
+                            focused={active === 'eight'}
+                            icon={({ color, size }) => (
+                                <Image 
+                                    source={Vender}
+                                    style={{ width: 22, height: 22 }}
+                                />
+                            )} 
+                            onPress={() => setActive('eight')}
+                            label="Vender"
+                    />
+                    )}
+
+                    {active === 'nine' ? (
+                        <DrawerItem
+                            focused={active === 'nine'}
+                            icon={({ color, size }) => (
+                                <Image 
+                                    source={HistoricoBlue}
+                                    style={{ width: 22, height: 22 }}
+                                />
+                            )}
+                            onPress={() => setActive('nine')}
+                            label="Histórico"
+                    />
+                    ) : (
+                        <DrawerItem
+                            focused={active === 'nine'}
+                            icon={({ color, size }) => (
+                                <Image 
+                                    source={Historico}
+                                    style={{ width: 22, height: 22 }}
+                                />
+                            )}
+                            onPress={() => setActive('nine')}
+                            label="Histórico"
+                        />
+                    )}
 
                     <DrawerItem
+                        focused={active === 'ten'}
                         icon={({ color, size }) => (
                             <Image 
                                 source={Categorias}
                                 style={{ width: 22, height: 22 }}
                             />
                         )}
+                        onPress={() => setActive('ten')}
                         label="Categorias"
                     />
 
                     <DrawerItem
+                        focused={active === 'eleven'}
                         icon={({ color, size }) => (
                             <Image 
                                 source={Supermercado}
                                 style={{ width: 22, height: 22 }}
                             />
                         )}
+                        onPress={() => setActive('eleven')}
                         label="Supermercado"
                     />
 
                     <DrawerItem
+                        focused={active === 'twelve'}
                         icon={({ color, size }) => (
                             <Image 
                                 source={Lojas}
                                 style={{ width: 22, height: 22 }}
                             />
                         )}
+                        onPress={() => setActive('twelve')}
                         label="Lojas oficiais"
                     />
 
                     <DrawerItem
+                        focused={active === 'thirteen'}
                         icon={({ color, size }) => (
                             <Image 
                                 source={Ajuda}
                                 style={{ width: 22, height: 22 }}
                             />
                         )}
+                        onPress={() => setActive('thirteen')}
                         label="Ajuda"
                     />
                 </Drawer.Section>  
