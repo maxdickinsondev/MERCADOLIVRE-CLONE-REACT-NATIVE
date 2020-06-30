@@ -27,6 +27,14 @@ export const Title = styled.Text`
     font-weight: bold;
 `;
 
+export const AreaDescription = styled.View`
+
+`;
+
+export const Description = styled.Text`
+
+`;
+
 export const AreaImage = styled.View`
     align-items: center;
     padding-top: 20px;
@@ -45,10 +53,25 @@ export const AreaInfo = styled.View`
     border-color: #eee;
 `;
 
-export const AreaDownload = styled.View``;
+export const AreaDownload = styled.View`
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+`;
 
 export const ButtonDownload = styled.TouchableOpacity`
+    background-color: #4194F5;
+    height: 35px;
+    border-radius: 4px;
+    justify-content: center;
+    width: 80px;
+    margin-right: 15px;
+`;
 
+export const ButtonText = styled.Text`
+    font-size: 16px;
+    text-align: center;
+    color: #fff;
 `;
 
 export const AreaProducts = styled.View`
@@ -72,6 +95,10 @@ export const AreaCard = styled.View`
 
     width: 100%;
     max-width: 330px;
+`;
+
+export const AreaMarket = styled.View`
+    flex-direction: row;
 `;
 
 export const ImageTools = styled.Image`

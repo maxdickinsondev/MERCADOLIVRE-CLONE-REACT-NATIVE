@@ -1,13 +1,16 @@
 import React from 'react';
 
 import { Container, Area, AreaTitle, Title, AreaImage, Image,
-    AreaDownload, ButtonDownload, AreaCard, ImageTools
+    AreaDownload, ButtonDownload, AreaCard, ImageTools,
+    ButtonText, AreaDescription, Description, AreaMarket
 } from './styles';
 
 import Descontos from '../../assets/descontos/descontos.jpeg';
 import Ferramentas from '../../assets/recomendation/ferramentas.jpeg';
 import Conforto from '../../assets/descontos/conforto.jpeg';
 import Cozinha from '../../assets/recomendation/cozinha.jpeg';
+
+import MercadoPago from '../../assets/mercadopago.png';
 
 import Categories from '../Categories';
 
@@ -27,7 +30,21 @@ export default function Discounts() {
                     </AreaImage>
 
                     <AreaDownload>
-                        <ButtonDownload />
+                        <AreaMarket>
+                            <Image 
+                                style={{ width: 70, height: 30 }}
+                                source={MercadoPago}
+                            />
+                            
+                            <AreaDescription>
+                                <Description>Exclusivo com o</Description>
+                                <Description>Mercado Pago</Description>
+                            </AreaDescription>
+                        </AreaMarket>
+
+                        <ButtonDownload onPress={() => {}}>
+                            <ButtonText>Baixar</ButtonText>
+                        </ButtonDownload>
                     </AreaDownload>
                 </Area>
             </Container>
