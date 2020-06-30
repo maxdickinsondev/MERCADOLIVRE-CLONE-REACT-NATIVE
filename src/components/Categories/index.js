@@ -11,7 +11,8 @@ import Fogão from '../../assets/categories/fogão.png';
 import Volante from '../../assets/categories/volante.png';
 
 import { Container, Area, AreaInfo, AreaTitle, 
-    Title, AreaCategories, Description, Image
+    Title, AreaCategories, Description, Image,
+    AreaInfoFooter, AreaCategoriesFooter
 } from './styles';
 
 export default function Categories() {
@@ -77,46 +78,13 @@ export default function Categories() {
                         </AreaCategories>
                     </AreaInfo>
 
-                    <AreaInfo>
-                        <AreaCategories style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
-                            <Description style={{ color: '#4194F5' }}>Acessórios para Veículos</Description>
+                    <AreaInfoFooter>
+                        <AreaCategoriesFooter style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
+                            <Description style={{ color: '#4194F5' }}>Ver todas as categorias</Description>
 
                             <ArrowRight name="keyboard-arrow-right" size={25} color="#4194F5" />
-                        </AreaCategories>
-                    </AreaInfo>
-                </Area>
-            </Container>
-
-
-
-
-
-
-            <Container>
-                <Area style={{ elevation: 5 }}>
-                    <AreaInfo>
-                        <AreaTitle>
-                            <Title>Categorias</Title>
-                        </AreaTitle>
-
-                        <AreaCategories>
-                            <Car name="car" size={20} />
-
-                            <Description>Carros, Motos e Outros</Description>
-                        </AreaCategories>
-                    </AreaInfo>
-
-                    <AreaInfo>
-                        <AreaTitle>
-                            <Title>Categorias</Title>
-                        </AreaTitle>
-
-                        <AreaCategories>
-                            <Smartphone name="smartphone" size={20} />
-
-                            <Description>Carros, Motos e Outros</Description>
-                        </AreaCategories>
-                    </AreaInfo>
+                        </AreaCategoriesFooter>
+                    </AreaInfoFooter>
                 </Area>
             </Container>
         </>

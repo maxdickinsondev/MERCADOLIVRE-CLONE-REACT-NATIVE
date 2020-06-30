@@ -49,7 +49,7 @@ export default function Recomendation() {
                     </AreaHistory>
                 </Area>
 
-                <Area style={{ elevation: 5 }}>
+                <Area style={{ elevation: 5, marginTop: 15 }}>
                     <AreaTitle>
                         <Title>Inspirado no último visto</Title>
                     </AreaTitle>

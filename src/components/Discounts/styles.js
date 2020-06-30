@@ -67,7 +67,8 @@ export const AreaDetails = styled.View`
 export const AreaCard = styled.View`
     align-items: center;
     border-radius: 4px;
-    margin-bottom: 10px;
+    margin-top: 15px;
+    margin-bottom: 15px;
 
     width: 100%;
     max-width: 330px;

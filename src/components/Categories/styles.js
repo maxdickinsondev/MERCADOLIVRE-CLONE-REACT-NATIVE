@@ -2,7 +2,8 @@ import styled from 'styled-components';
 
 export const Container = styled.View`
     align-items: center;
-    
+    margin-bottom: 110px;
+    margin-top: 15px;
 `;
 
 export const AreaTitle = styled.View`
@@ -44,6 +45,15 @@ export const AreaInfo = styled.View`
     flex-direction: column;
     border-bottom-width: 1px;
     border-color: #eee;
+`;
+
+export const AreaInfoFooter = styled.View`
+
+`;
+
+export const AreaCategoriesFooter = styled.View`
+    padding: 10px;
+    margin-top: 10px;
 `;
 
 export const Image = styled.Image`

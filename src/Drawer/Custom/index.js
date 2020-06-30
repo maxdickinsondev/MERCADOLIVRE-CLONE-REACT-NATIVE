@@ -35,13 +35,13 @@ export default function Custom(props) {
     return (
         <View style={{ flex: 1 }}>
             <DrawerContentScrollView {...props }>
-                <View style={{ height: 100, width: 280, backgroundColor: '#FFDA18', padding: 20, flexDirection: 'row', alignItems: 'center' }}>
+                <View style={{ marginTop: -4, height: 100, width: 280, backgroundColor: '#FFDA18', padding: 20, flexDirection: 'row', alignItems: 'center' }}>
                     <View>
                         <Image style={{ width: 50, height: 50, marginRight: 10 }}  source={Perfil} />
                     </View>
 
                     <View>
-                        <Text>Olá, Max</Text>
+                        <Text style={{ color: '#7B7B81' }}>Olá, Max</Text>
                         <Text>Nível 1 - Mercado Pontos </Text>
                     </View>
                 </View>
@@ -71,7 +71,7 @@ export default function Custom(props) {
                             )}
 
                             label="Inicio"
-                            onPress={() => {props.navigation.navigate('Perfil'), setActive('first')}}
+                            onPress={() => setActive('first')}
                         />
                     )}
 

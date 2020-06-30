@@ -14,7 +14,7 @@ import Categories from '../Categories';
 export default function Discounts() {
     return (
         <>
-            <Container>
+            <Container style={{ marginTop: 15 }}>
                 <Area style={{ elevation: 5 }}>
                     <AreaTitle>
                         <Title>Descontos com Mercado Pago</Title>
