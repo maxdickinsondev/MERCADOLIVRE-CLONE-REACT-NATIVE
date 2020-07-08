@@ -3,7 +3,7 @@ import { View, Text, Image } from 'react-native';
 import { Drawer } from 'react-native-paper';
 import { DrawerContentScrollView, DrawerItem } from '@react-navigation/drawer';
 
-import Perfil from '../../assets/conta.png';
+import Perfil from '../../assets/perfil/max.jpg';
 
 import Inicio from '../../assets/inicio.png';
 import Buscar from '../../assets/buscar.png';
@@ -30,14 +30,14 @@ import VenderBlue from '../../assets/icons_blue/vender_blue.png';
 import HistoricoBlue from '../../assets/icons_blue/historico_blue.png';
 
 export default function Custom(props) {
-    const [active, setActive] = useState('');
+    const [active, setActive] = useState('first');
 
     return (
         <View style={{ flex: 1 }}>
             <DrawerContentScrollView {...props }>
                 <View style={{ marginTop: -4, height: 100, width: 280, backgroundColor: '#FFDA18', padding: 20, flexDirection: 'row', alignItems: 'center' }}>
                     <View>
-                        <Image style={{ width: 50, height: 50, marginRight: 10 }}  source={Perfil} />
+                        <Image style={{ width: 50, height: 50, marginRight: 10, borderRadius: 25 }}  source={Perfil} />
                     </View>
 
                     <View>

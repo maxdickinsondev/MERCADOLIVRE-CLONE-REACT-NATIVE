@@ -15,6 +15,8 @@ import recarga from '../../assets/products/recarga.jpeg';
 import Offers from '../Offers';
 
 export default function Products() {
+    const [refreshing, setRefreshing] = useState(false);
+
     const [moveY] = useState(new Animated.Value(50));
 
     const arr = [
@@ -32,10 +34,18 @@ export default function Products() {
         }).start();
     }, []);
 
+    function handleRefresh() {
+        setRefreshing(true);
+
+        setRefreshing(false);
+    }
+
     return (
         <>
             <List 
                 data={arr}
+                onRefresh={handleRefresh}
+                refreshing={refreshing}
                 showsVerticalScrollIndicator={false}
                 renderItem={({ item }) => (
                     <>

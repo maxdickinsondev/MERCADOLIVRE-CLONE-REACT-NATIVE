@@ -18,3 +18,9 @@ export const Description = styled.Text`
     font-size: 16px;
     color: #7B7B81;
 `;
+
+export const AreaLottie = styled.View`
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+`;
