@@ -14,4 +14,4 @@
 - Lottie React Native
 - Expo
 
-ASSISTA O VÍDEO NO YOUTUBE: https://youtu.be/sKmz2k65PWg
+ASSISTA O VÍDEO NO YOUTUBE: https://youtu.be/4Bwwkct4S0U
